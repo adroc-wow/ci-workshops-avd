@@ -3,6 +3,12 @@ aaa_authorization:
     default: local
 aaa_root:
   disabled: true
+banners:
+  motd: 'You shall not pass. Unless you are authorized. Then you shall pass.
+
+    EOF
+
+    '
 config_end: true
 daemon_terminattr:
   cvaddrs:
@@ -91,6 +97,15 @@ local_users:
   sha512_password: $6$392c691d900da550$Yc.o6MFMEOjgG2f.g505Q3IP2q5hpAiWBwxATiV7Jsa.9I16e/gIEfPw7dKPk8.pC2Z8SfPwT1M5lKYpOoLS9/
   ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1IQh9bW4YN3EgYCaRvCs53LTX5BNLIQvs79bQovaJl88fLUbdNcEzd4/5BbkOurDRJ7LxhEuy+wXKzoww16y1aO9sQP9eZd0EvrjiUs15RzeQpyZWeSOX0oDmXp1oYLNfSpfvu9U881YhW9e5ZKL16zsrU7HGCG2pdUc8bavC9+Vc41suodfQNq2JlN34BEwlbmSAcubWTDIkx1VMmCKO+TO3An52nC6FTRQ597ark1fQmuhWIsicn/iDJPeqrL4QybB3NbvBrk6VHmkrhnQ4RwbdNRnG42Qtd79mtI6DbPeL0TFDQIRTkvpZWH9ZVV3s4/38gvz455Do+nUkBmdF
     arista@achan-7-24-1-31ded5d2-eos
+logging:
+  vrfs:
+  - name: default
+    source_interface: Management0
+    hosts:
+    - name: 10.200.0.108
+      protocol: udp
+    - name: 10.200.1.108
+      protocol: udp
 loopback_interfaces:
 - name: Loopback0
   description: ROUTER_ID
