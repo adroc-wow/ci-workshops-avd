@@ -3,6 +3,10 @@ aaa_authorization:
     default: local
 aaa_root:
   disabled: true
+banners:
+  motd: 'PISS OFF!!!
+
+    EOF'
 config_end: true
 daemon_terminattr:
   cvaddrs:
