@@ -74,3 +74,11 @@ custom_structured_configuration_banners:
   motd: |
     PISS OFF!!!
     EOF
+
+# Syslog
+logging_settings:
+  hosts:
+    - name: 10.200.0.108
+    - name: 10.200.1.108
+  vrfs:
+    - name: default

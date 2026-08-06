@@ -6,7 +6,9 @@ aaa_root:
 banners:
   motd: 'PISS OFF!!!
 
-    EOF'
+    EOF
+
+    '
 config_end: true
 daemon_terminattr:
   cvaddrs:
@@ -92,6 +94,15 @@ local_users:
   sha512_password: $6$e171b8f339ecacc6$hRTNCT/RbgCWEwPFSI1lbRsb644/fOV2AvZswLqcB1JVltS4R3SwuTcFH7RFQ5Dex2/BufVgZNejDJRBN6uMY0
   ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1IQh9bW4YN3EgYCaRvCs53LTX5BNLIQvs79bQovaJl88fLUbdNcEzd4/5BbkOurDRJ7LxhEuy+wXKzoww16y1aO9sQP9eZd0EvrjiUs15RzeQpyZWeSOX0oDmXp1oYLNfSpfvu9U881YhW9e5ZKL16zsrU7HGCG2pdUc8bavC9+Vc41suodfQNq2JlN34BEwlbmSAcubWTDIkx1VMmCKO+TO3An52nC6FTRQ597ark1fQmuhWIsicn/iDJPeqrL4QybB3NbvBrk6VHmkrhnQ4RwbdNRnG42Qtd79mtI6DbPeL0TFDQIRTkvpZWH9ZVV3s4/38gvz455Do+nUkBmdF
     arista@achan-7-24-1-31ded5d2-eos
+logging:
+  vrfs:
+  - name: default
+    source_interface: Management0
+    hosts:
+    - name: 10.200.0.108
+      protocol: udp
+    - name: 10.200.1.108
+      protocol: udp
 management_api_http:
   enable_https: true
   enable_vrfs:
