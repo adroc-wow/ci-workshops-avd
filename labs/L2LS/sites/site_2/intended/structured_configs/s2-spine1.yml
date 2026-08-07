@@ -3,12 +3,6 @@ aaa_authorization:
     default: local
 aaa_root:
   disabled: true
-banners:
-  motd: 'PISS OFF!!!
-
-    EOF
-
-    '
 config_end: true
 daemon_terminattr:
   cvaddrs:
@@ -128,17 +122,6 @@ local_users:
   privilege: 15
   role: network-admin
   sha512_password: $6$638ad94f864bab4b$JvD2Pdv8HayByx0SjeAwFJZFgD8kj40H0KM4zsf4oHJYZWwSyvXvga6d2seC655V62.PmJfZstDzt1PP1Ypqq.
-  ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1IQh9bW4YN3EgYCaRvCs53LTX5BNLIQvs79bQovaJl88fLUbdNcEzd4/5BbkOurDRJ7LxhEuy+wXKzoww16y1aO9sQP9eZd0EvrjiUs15RzeQpyZWeSOX0oDmXp1oYLNfSpfvu9U881YhW9e5ZKL16zsrU7HGCG2pdUc8bavC9+Vc41suodfQNq2JlN34BEwlbmSAcubWTDIkx1VMmCKO+TO3An52nC6FTRQ597ark1fQmuhWIsicn/iDJPeqrL4QybB3NbvBrk6VHmkrhnQ4RwbdNRnG42Qtd79mtI6DbPeL0TFDQIRTkvpZWH9ZVV3s4/38gvz455Do+nUkBmdF
-    arista@achan-7-24-1-31ded5d2-eos
-logging:
-  vrfs:
-  - name: default
-    source_interface: Management0
-    hosts:
-    - name: 10.200.0.108
-      protocol: udp
-    - name: 10.200.1.108
-      protocol: udp
 loopback_interfaces:
 - name: Loopback0
   description: ROUTER_ID

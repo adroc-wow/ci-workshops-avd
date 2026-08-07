@@ -3,7 +3,6 @@
 ## Table of Contents
 
 - [Management](#management)
-  - [Banner](#banner)
   - [Management Interfaces](#management-interfaces)
   - [DNS Domain](#dns-domain)
   - [IP Name Servers](#ip-name-servers)
@@ -16,7 +15,6 @@
   - [AAA Authorization](#aaa-authorization)
 - [Monitoring](#monitoring)
   - [TerminAttr Daemon](#terminattr-daemon)
-  - [Logging](#logging)
 - [MLAG](#mlag)
   - [MLAG Summary](#mlag-summary)
   - [MLAG Device Configuration](#mlag-device-configuration)
@@ -45,15 +43,6 @@
   - [VRF Instances Device Configuration](#vrf-instances-device-configuration)
 
 ## Management
-
-### Banner
-
-#### MOTD Banner
-
-```text
-PISS OFF!!!
-EOF
-```
 
 ### Management Interfaces
 
@@ -187,7 +176,6 @@ management api http-commands
 ```eos
 !
 username arista privilege 15 role network-admin secret sha512 <removed>
-username arista ssh-key ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1IQh9bW4YN3EgYCaRvCs53LTX5BNLIQvs79bQovaJl88fLUbdNcEzd4/5BbkOurDRJ7LxhEuy+wXKzoww16y1aO9sQP9eZd0EvrjiUs15RzeQpyZWeSOX0oDmXp1oYLNfSpfvu9U881YhW9e5ZKL16zsrU7HGCG2pdUc8bavC9+Vc41suodfQNq2JlN34BEwlbmSAcubWTDIkx1VMmCKO+TO3An52nC6FTRQ597ark1fQmuhWIsicn/iDJPeqrL4QybB3NbvBrk6VHmkrhnQ4RwbdNRnG42Qtd79mtI6DbPeL0TFDQIRTkvpZWH9ZVV3s4/38gvz455Do+nUkBmdF arista@achan-7-24-1-31ded5d2-eos
 ```
 
 ### Enable Password
@@ -228,31 +216,6 @@ aaa authorization exec default local
 daemon TerminAttr
    exec /usr/bin/TerminAttr -cvaddr=192.168.0.5:9910 -cvauth=token,/tmp/token -cvvrf=default -disableaaa -smashexcludes=ale,flexCounter,hardware,kni,pulse,strata -taillogs -cvsourceintf=Management0
    no shutdown
-```
-
-### Logging
-
-#### Logging Servers and Features Summary
-
-| Type | Level |
-| ---- | ----- |
-
-| VRF | Source Interface |
-| --- | ---------------- |
-| default | Management0 |
-
-| VRF | Hosts | Ports | Protocol | SSL-profile |
-| --- | ----- | ----- | -------- | ----------- |
-| default | 10.200.0.108 | Default | UDP | - |
-| default | 10.200.1.108 | Default | UDP | - |
-
-#### Logging Servers and Features Device Configuration
-
-```eos
-!
-logging host 10.200.0.108
-logging host 10.200.1.108
-logging source-interface Management0
 ```
 
 ## MLAG

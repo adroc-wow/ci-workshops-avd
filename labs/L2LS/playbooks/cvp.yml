@@ -10,3 +10,4 @@
         name: arista.avd.cv_deploy
       vars:
         cv_run_change_control: true
+        cv_server: "achan-7-24-1-31ded5d2-eos.topo.testdrive.arista.com"
